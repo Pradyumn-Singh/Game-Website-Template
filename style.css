@@ -99,10 +99,10 @@ a{
 }
 
 .game-image{
-    transition: transform 0.5s, filter 1s ease-in-out;
+    transition: transform 0.25s, filter 1s ease-in-out;
 }
 .game-image:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .caption {
