@@ -69,7 +69,12 @@ a{
   right:20px;
   top:20px;
   text-decoration:none
+  transition: 0.25s;
 }
+.menu:hover{
+    background-color: #68379E;
+}
+
 .menu:after{
   content:"";
   display:block;
