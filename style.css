@@ -119,6 +119,14 @@ a{
 #login:hover{
     color: pink
 }
+#login:hover{
+    color: pink
+}
+#admin_login{
+    position: absolute;
+    top : 50px;
+    left : 20px;
+}
 
 .caption {
     padding-top: 10px;
