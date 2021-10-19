@@ -57,7 +57,28 @@
         </div>
     </form>
     <p id="demo"></p>
-
+    <script type="text/javascript">
+        function check(){
+            var x = document.getElementById("main_form");
+            var username = x.elements[0].value;
+            var password = x.elements[1].value;
+            if(username=="admin" && password=="aaa"){
+                alert("Succesfully logged in");
+                window.setTimeout(function(){
+                    window.location.href = "F:/Webdev/Game-Website-Template/index.html";
+                    return false;
+                }, 1000);
+                return false;
+            }
+            else alert("Unsuccesful log in");
+            return false;
+        }
+        function back(){
+            window.location.href = "index.html";
+            return false;
+        }
+    </script>
+        
     </body>
 </html>
 =======
