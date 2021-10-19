@@ -45,15 +45,39 @@
     </head>
     <body>
         <center> <h1> Admin Login </h1> </center>
-    <form>
+    <form id="main_form">
         <div class="container">
             <label>Username : </label>
-            <input type="text" placeholder="Enter Username" name="username" required>
+            <input type="text" placeholder="Enter Username" id="username" required>
             <label>Password : </label>
-            <input type="password" placeholder="Enter Password" name="password" required>
-            <button type="submit">Login</button>
-            <button type="button" class="cancelbtn"> Cancel</button>
+            <input type="password" placeholder="Enter Password" id="password" required>
+            <button type="button" onclick="check()">Login</button>
+            <button type="button" class="cancelbtn" onclick="back()"> Cancel </button>
         </div>
     </form>
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+        function check(){
+            var x = document.getElementById("main_form");
+            var username = x.elements[0].value;
+            var password = x.elements[1].value;
+            if(username=="admin" && password=="aaa"){
+                alert("Succesfully logged in");
+                window.setTimeout(function(){
+                    window.location.href = "F:/Webdev/Game-Website-Template/index.html";
+                    return false;
+                }, 1000);
+                return false;
+            }
+            else alert("Unsuccesful log in");
+            return false;
+        }
+        function back(){
+            window.location.href = "index.html";
+            return false;
+        }
+    </script>
+
     </body>
 </html>
