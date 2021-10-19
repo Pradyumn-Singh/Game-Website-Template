@@ -58,6 +58,7 @@
     <p id="demo"></p>
     <script type="text/javascript">
         function check(){
+            var attempt = 3;
             var x = document.getElementById("main_form");
             var username = x.elements[0].value;
             var password = x.elements[1].value;
@@ -69,7 +70,10 @@
                 }, 1000);
                 return false;
             }
-            else alert("Unsuccesful log in");
+            else 
+            attempt --;
+            alert("Unsuccesful log in");
+            alert("You have left "+attempt+" attempt;");
             return false;
         }
         function back(){
@@ -77,6 +81,7 @@
             return false;
         }
     </script>
+
         
     </body>
 </html>
