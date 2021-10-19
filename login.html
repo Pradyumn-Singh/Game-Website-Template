@@ -3,9 +3,14 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+html, body {
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
-    align: center;
+    align-items: center;
     background-color: black;
     content:"";
     width:99.2%;
@@ -25,7 +30,7 @@ body:before{
   left:0;
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0); backface-visibility: hidden;
-  scale(1.0, 1.0);
+  scale :(1.0, 1.0);
     transform: translateZ(0);
   background:#1B2030 url("https://free4kwallpapers.com/no-watermarks/originals/2019/02/16/cyberpunk--wallpaper.jpg") 50% 0 no-repeat;
   background-size:100%;
@@ -45,10 +50,10 @@ form {
 }
 
 #top{
-    color: white;
+    color: grey;
     font-size: 40px;
     text-align:center;
-    text-shadow: 2px 2px #ff0000;
+    text-shadow: 2px 2px blue;
 }
 
 input[type=text], input[type=password] {
@@ -121,22 +126,22 @@ span.psw {
     <img src="images/logo.png" alt="Logo" class="avatar">
   </div>
 
-  <div class="container">
+  <div class="container" style="height: fit-content;">
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" id="username" placeholder="Enter Username" name="uname" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" id="password" placeholder="Enter Password" name="psw" required>
 
-    <button type="submit">Login</button>
+    <button type="submit" id="submit" onclick="validate()">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
   </div>
 
-  <div class="container" style="background-color:#68379E">
+  <div class="container" style="background-color:#68379E; height: fit-content;">
     <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
+    <span class="psw"> <a href="#" style="color: white;">Forgot password?</a></span>
   </div>
 </form>
 
